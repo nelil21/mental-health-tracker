@@ -1,8 +1,9 @@
-# Create your models here.
-import uuid 
+import uuid
 from django.db import models
 
+# Create your models here.
 class MoodEntry(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     mood = models.CharField(max_length=255)
     time = models.DateField(auto_now_add=True)
     feelings = models.TextField()

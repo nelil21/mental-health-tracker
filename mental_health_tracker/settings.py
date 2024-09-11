@@ -1,3 +1,4 @@
+
 """
 Django settings for mental_health_tracker project.
 
@@ -20,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8rq!q!d$gd!0oo%1th%t%br4ncg)_v76w)*2(rlz*t4zs)9d8u'
+SECRET_KEY = 'django-insecure-q4nn8*4p)-@ou8h)v5*d+n#(=33fis!onsb4o*26g4j4qm@3q!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["http://localhost", "http://127.0.0.1", "http://nelil-amaani-mentalhealthtracker.pbp.cs.ui.ac.id","https://nelil-amaani-mentalhealthtracker.pbp.cs.ui.ac.id" ]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "nelil-amaani-mentalhealthtracker.pbp.cs.ui.ac.id"]
 
 
 # Application definition
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'mental_health_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'], # Tambahkan konten baris ini
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +123,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://nelil-amaani-mentalhealthtracker.pbp.cs.ui.ac.id/", "https://nelil-amaani-mentalhealthtracker.pbp.cs.ui.ac.id/"]
